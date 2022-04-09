@@ -8,17 +8,11 @@ const port = 3000
 const session = require('express-session')
 
 const msal =  require("@azure/msal-node");
-require('dotenv');
+require('dotenv').config();
 
 const graph = require('@microsoft/microsoft-graph-client');
 require('isomorphic-fetch');
 
-app.use(session({
-    secret: 'your_secret_value_here',
-    resave: false,
-    saveUninitialized: false,
-    unset: 'destroy'
-  }));
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -49,7 +43,15 @@ const msalConfig = {
 };
 
 // Create msal application object
-app.locals.users = new msal.ConfidentialClientApplication(msalConfig);
+const tok = new msal.ConfidentialClientApplication(msalConfig);
+
+app.use(session({
+    secret:'sec-key',
+    resave: false,
+    saveUninitialized: false,
+    unset: 'destroy'
+}));
+
 
 // Initialize Graph client
 const client = graph.Client.init({
