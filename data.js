@@ -1,0 +1,60 @@
+const userToken = {
+  authority: 'https://login.microsoftonline.com/common/',
+  uniqueId: '00000000-0000-0000-97e9-ef8563cacbac',
+  tenantId: '9188040d-6c67-4c5b-b112-36a304b66dad',
+  scopes: [
+    'User.Read',
+    'openid',
+    'profile',
+    'Calendars.ReadWrite',
+    'MailboxSettings.Read'
+  ],
+  account: {
+    homeAccountId: '00000000-0000-0000-97e9-ef8563cacbac.9188040d-6c67-4c5b-b112-36a304b66dad',   
+    environment: 'login.windows.net',
+    tenantId: '9188040d-6c67-4c5b-b112-36a304b66dad',
+    username: 'boxofwind@gmail.com',
+    localAccountId: '00000000-0000-0000-97e9-ef8563cacbac',
+    name: 'Quang Vinh Nguyen',
+    idTokenClaims: {
+      ver: '2.0',
+      iss: 'https://login.microsoftonline.com/9188040d-6c67-4c5b-b112-36a304b66dad/v2.0',
+      sub: 'AAAAAAAAAAAAAAAAAAAAAHV5rShQOWLJrsqYrSgkkis',
+      aud: '7731d4ee-21d3-4652-acaf-31e6b5433a2a',
+      exp: 1649690478,
+      iat: 1649603778,
+      nbf: 1649603778,
+      name: 'Quang Vinh Nguyen',
+      preferred_username: 'boxofwind@gmail.com',
+      oid: '00000000-0000-0000-97e9-ef8563cacbac',
+      tid: '9188040d-6c67-4c5b-b112-36a304b66dad',
+      aio: 'DZmtEuptsvR5ONJoKLPIA6gLnNjLx1Y*gDn9gnW1srR8Pu!4Mlf8oIH2jUNNq8fGzoY6St4QSqcEGgP4Y71LpYKo08fUqeLhscrSJsHCJCzHBmKMyxXRHb8rjNJYwGelwHq*rVuzkOPfRMicdIacvWA$'
+    }
+  },
+  idToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImJXOFpjTWpCQ25KWlMtaWJYNVVRRE5TdHZ4NCJ9.eyJ2ZXIiOiIyLjAiLCJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vOTE4ODA0MGQtNmM2Ny00YzViLWIxMTItMzZhMzA0YjY2ZGFkL3YyLjAiLCJzdWIiOiJBQUFBQUFBQUFBQUFBQUFBQUFBQUFIVjVyU2hRT1dMSnJzcVlyU2dra2lzIiwiYXVkIjoiNzczMWQ0ZWUtMjFkMy00NjUyLWFjYWYtMzFlNmI1NDMzYTJhIiwiZXhwIjoxNjQ5NjkwNDc4LCJpYXQiOjE2NDk2MDM3NzgsIm5iZiI6MTY0OTYwMzc3OCwibmFtZSI6IlF1YW5nIFZpbmggTmd1eWVuIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYm94b2Z3aW5kQGdtYWlsLmNvbSIsIm9pZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC05N2U5LWVmODU2M2NhY2JhYyIsInRpZCI6IjkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImFpbyI6IkRabXRFdXB0c3ZSNU9OSm9LTFBJQTZnTG5Oakx4MVkqZ0RuOWduVzFzclI4UHUhNE1sZjhvSUgyalVOTnE4Zkd6b1k2U3Q0UVNxY0VHZ1A0WTcxTHBZS28wOGZVcWVMaHNjclNKc0hDSkN6SEJtS015eFhSSGI4cmpOSll3R2Vsd0hxKnJWdXprT1BmUk1pY2RJYWN2V0EkIn0.H1_KGAmQ7U1GQV3cQi-g-TeqY4ota9UIslRYre0CN5iM4Dt94uSkbVJO1BfL3VN66Iek0GHBaHPM2_GmPbO8cQJWDNdDx-ldglQgBC1CopyQ7az97bKWyXH-OQaElhK7R44T1S1xkFgVO4Tolu0dhMLhJQcWL3Tpu_zsv4aNgMsMe-IA9VtpX-XQBy4ozBApKqBI1VtKpOyUfDdmOIuqxVdsWaH4iBgngOYjiofaA5optweznXY1_RWTVwXsdVynAcHe6CHSJpSD9KIrSR59B3w_Cke_l3k8DW07XkUysDoyeL3KVqd5Q9gBgtCh2wnpZVdcav_GwFq3qjr51o71IA',
+  idTokenClaims: {
+    ver: '2.0',
+    iss: 'https://login.microsoftonline.com/9188040d-6c67-4c5b-b112-36a304b66dad/v2.0',
+    sub: 'AAAAAAAAAAAAAAAAAAAAAHV5rShQOWLJrsqYrSgkkis',
+    aud: '7731d4ee-21d3-4652-acaf-31e6b5433a2a',
+    exp: 1649690478,
+    iat: 1649603778,
+    nbf: 1649603778,
+    name: 'Quang Vinh Nguyen',
+    preferred_username: 'boxofwind@gmail.com',
+    oid: '00000000-0000-0000-97e9-ef8563cacbac',
+    tid: '9188040d-6c67-4c5b-b112-36a304b66dad',
+    aio: 'DZmtEuptsvR5ONJoKLPIA6gLnNjLx1Y*gDn9gnW1srR8Pu!4Mlf8oIH2jUNNq8fGzoY6St4QSqcEGgP4Y71LpYKo08fUqeLhscrSJsHCJCzHBmKMyxXRHb8rjNJYwGelwHq*rVuzkOPfRMicdIacvWA$'
+  },
+  accessToken: 'EwB4A8l6BAAUwihrrCrmQ4wuIJX5mbj7rQla6TUAAUxnv3H6L/DfWtZ+3TZ66hH0C0/n9IwNlNkX71wlWdfe7aRV+H3UDbrBI7nNFvOLH2T8dYvtLGKIwIym1ZlWCQb79CyvtUm1RULhrCuXLqn8LA1+D/0Ax28Hy7SqhlUDaRDEA8iF1g91w770w/lF8jOkKZFEt4weiVBufAQwxC1CEsY/HVg+SufHunyCYDl0u/211I0fBehDhj6gfDW+10qC96JRZ/P14xz91rhC0yv1Z3R1CQLizzi8oey+AqtDQnI40OYJsLycOtlRL5QxVJiTSq6K7pCXzNMlxosR6HD5e1Cn339UJ84B/8feipd2q01Lw7PWqTwT+96C7AKcwUwDZgAACJ6Tq+wXpApwSAK53pBKhdVlynAhmC52tQKQMy2F7KCH+mxb0aJMYx+ESCQG/q25kIBTx+DTPT72Bo5DOU9E9M2UCXbf0TXO28IqBnM7ZgQBbhG3zIA8j9SG5msqcK7CdmMI8pXpMISxUfY9wfwb/IMRv/QlgjXwKQufidWp9kOGm/nVWf7EScEQnieA4ERqXXEU6olbtg+lpyXJFVm+p3iUjhZ2r49rNRK/liSIOnhvtkdBiFwNdbinzhUkPAc0ruAWSOgSnogEvsU03seaCkFEAHZYeR+6vYiUyhjNSCbCywd3TtcFQKUd7/8w4Q3vqo4ueRpc3OSflSsYwsjVDJ0LS4+UYX1wNkPubTdzTAK+RKw1jiUycNnErpOsduipTdTwbaM1E8fPLKoftfFkTceR9JpmYy3B4YimItZ58HMbz0lsl7NLOaR2CxxZlN/8lVkQEkxJe88M1jpaFBx6dIAVCueJz2h0LuaX+NoyXOWS/ThRQx3X4RsdkxhKzrNRaLmchjPCGQ0UX9Sz27L11bw9XC3XYYwBRPbRHhMlJjXTtDxfoBUC8Aa7O3jSl72ySVhOB4qG8R468ZrMc2hFKFRsT0nDvkMnnyxPkDsCLG6OW15tKoY9yj62p+N6JpqAk20TrGpKrtosP+jCbj6lIaP+HdPsGNPah9S1LITjdnE3VWvil9bkk5bZ0KoOWLb+ja+IicSovNRSKe3S5la0jHgMJkBgk6FyYFW11l5A+fsgcKSYqk/2D1D2ej+kvg2tTJuC7gBCAXSq+mtqx7EUiEhh3IQC',
+  fromCache: false,
+  expiresOn: "2022-04-10T16:21:16.000Z",
+  correlationId: '58e1021b-17af-49a7-b12c-a0cc1c8d8d17',
+  extExpiresOn: "2022-04-10T17:21:16.000Z",
+  familyId: '',
+  tokenType: 'Bearer',
+  state: '',
+  cloudGraphHostName: '',
+  msGraphHost: '',
+  code: undefined
+}

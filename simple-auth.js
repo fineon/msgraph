@@ -99,7 +99,8 @@ function getAuthenticatedClient(msalClient, userId) {
   return client;
 }
 
-app.get('/redirect', (req, res) => {
+//working OK, got the auth token from the ?code param and saved in memory session
+app.get('/auth/callback', (req, res) => {
     const tokenRequest = {
         code: req.query.code,
         scopes: ["user.read"],
@@ -109,7 +110,8 @@ app.get('/redirect', (req, res) => {
     pca.acquireTokenByCode(tokenRequest).then((response) => {
         req.session.token = response;
         console.log(req.session.token);
-        req.session.userId = response.token.account.homeAccountId;
+        req.session.userId = response.account.homeAccountId;
+        console.log(req.session.userId);
         res.sendStatus(200);
     }).catch((error) => {
         console.log(error);
@@ -121,14 +123,15 @@ app.get('/redirect', (req, res) => {
 });
 
 app.get('/onenote',(req,res)=>{
-    async function(msalClient, userId) {
-    const client = getAuthenticatedClient(pca, req.session.userId);
+  //   async (msalClient, userId) => {
+  //   const client = getAuthenticatedClient(pca, req.session.userId);
+  //   const user = await client
+  //     .api('/me/onenote/sections')
+  //     .get();
+  //   console.log(user);
+  // }
+  const apiTok = getAuthenticatedClient(pca, req.session.userId).api('/me/onenote/sections').get().catch((err)=> console.error(err));
+  console.log(apiTok);
+})
 
-    const user = await client
-      .api('/me/onenote/sections')
-      .get();
-    console.log(user);
-  }
-}
-
-app.listen(SERVER_PORT, () => console.log(`Msal Node Auth Code Sample app listening on port ${SERVER_PORT}!`))
+app.listen(SERVER_PORT, () => console.log(`Msal Node Auth Code Sample app listening on http://localhost:${SERVER_PORT}`))
