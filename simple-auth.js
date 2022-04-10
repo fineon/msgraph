@@ -48,6 +48,7 @@ const pca = new msal.ConfidentialClientApplication(config);
 
 app.get('/', (req, res) => {
     const authCodeUrlParameters = {
+      //TODO: look into one note scopes for every function init
         scopes: ["user.read"],
         redirectUri: REDIRECT_URI,
     };
@@ -103,6 +104,7 @@ function getAuthenticatedClient(msalClient, userId) {
 app.get('/auth/callback', (req, res) => {
     const tokenRequest = {
         code: req.query.code,
+        //TODO: look into one note scopes for every function init
         scopes: ["user.read"],
         redirectUri: REDIRECT_URI,
     };
@@ -122,14 +124,8 @@ app.get('/auth/callback', (req, res) => {
     // graph.Client.api('/me/onenote/sections').get().then((info)=> console.log(info)).catch((err)=> console.error(err))
 });
 
+// having isues with 401 error, or code -1 unauthorized permission or missing auth token,. Prob a user permission thing on Azure AD or scope in .env or sth
 app.get('/onenote',(req,res)=>{
-  //   async (msalClient, userId) => {
-  //   const client = getAuthenticatedClient(pca, req.session.userId);
-  //   const user = await client
-  //     .api('/me/onenote/sections')
-  //     .get();
-  //   console.log(user);
-  // }
   const apiTok = getAuthenticatedClient(pca, req.session.userId).api('/me/onenote/sections').get().catch((err)=> console.error(err));
   console.log(apiTok);
 })
